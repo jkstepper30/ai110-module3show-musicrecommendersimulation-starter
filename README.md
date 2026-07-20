@@ -19,15 +19,24 @@ Replace this paragraph with your own summary of what your version does.
 
 Explain your design in plain language.
 
-Some prompts to answer:
+- Real platforms run a pipeline: collect interactions → generate candidates (millions→hundreds) → score each candidate for the user → apply list-level reranking
 
-- What features does each `Song` use in your system
-  - For example: genre, mood, energy, tempo
-- What information does your `UserProfile` store
-- How does your `Recommender` compute a score for each song
-- How do you choose which songs to recommend
+- My system will implement a small, content-based pipeline: build per-song vectors, form a user vector from liked history, score candidates by closeness, then pick and lightly rerank top results.
 
-You can include a simple diagram or bullet list if helpful.
+ The features that my song will use in my system include: 
+  •	Numeric audio features: energy, tempo_bpm, valence, danceability, acousticness.
+  •	Categorical metadata: genre, mood.
+  •	Identifier fields: id, title, artist (used for lookup and optional artist-based rules).
+
+My UserProfile will store: 
+•	Liked/seed song ids and short recent history (last N plays).
+•	Preferred genres and mood weights (counts or normalized frequencies).
+•	Simple exposure/history counters (to avoid re-recommending immediately).
+
+My Recommender will compute a score for each song by: 
+•	Preprocess: min–max scale numeric features to [0,1] (or z-score).
+•	Categorical match: add a boost for genre/mood matches (e.g., +g_weight if genre == preferred; or use cosine on one-hot vectors).
+
 
 ---
 
