@@ -17,8 +17,6 @@ Replace this paragraph with your own summary of what your version does.
 
 ## How The System Works
 
-Explain your design in plain language.
-
 - Real platforms run a pipeline: collect interactions → generate candidates (millions→hundreds) → score each candidate for the user → apply list-level reranking
 
 - My system will implement a small, content-based pipeline: build per-song vectors, form a user vector from liked history, score candidates by closeness, then pick and lightly rerank top results.
@@ -39,6 +37,17 @@ My Recommender will compute a score for each song by:
 •	Preprocess: min–max scale numeric features to [0,1] (or z-score).
 •	Categorical match: add a boost for genre/mood matches (e.g., +g_weight if genre == preferred; or use cosine on one-hot vectors).
 
+Algorithm Recipe (finalized)
+•	Inputs: user target = {genre?, mood?, numeric targets: energy, tempo_bpm, valence, danceability, acousticness}. Song record has same fields.
+
+ Categorical scoring
+•	Genre: exact = +2.0, related/subgenre = +1.0, same parent category = +0.75
+•	Mood: exact = +1.0, related = +0.5
+
+Expected Biases: 
+•	Genre dominance: strong genre points will favor same-genre items and can hide great matches from other genres that fit mood/energy. Mitigation: reduce genre weight slightly or add a diversity/serendipity boost (e.g., +small score for cross-genre high numeric similarity).
+
+•	Feedback loop & popularity bias: optimizing for clicks can amplify already-popular songs. Mitigation: include exploration (epsilon-greedy), exposure caps, or re-weight novelty.
 
 ---
 
