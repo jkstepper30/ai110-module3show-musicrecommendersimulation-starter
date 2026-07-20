@@ -24,11 +24,13 @@ Explain your design in plain language.
 - My system will implement a small, content-based pipeline: build per-song vectors, form a user vector from liked history, score candidates by closeness, then pick and lightly rerank top results.
 
  The features that my song will use in my system include: 
+ 
   •	Numeric audio features: energy, tempo_bpm, valence, danceability, acousticness.
   •	Categorical metadata: genre, mood.
   •	Identifier fields: id, title, artist (used for lookup and optional artist-based rules).
 
 My UserProfile will store: 
+
 •	Liked/seed song ids and short recent history (last N plays).
 •	Preferred genres and mood weights (counts or normalized frequencies).
 •	Simple exposure/history counters (to avoid re-recommending immediately).
