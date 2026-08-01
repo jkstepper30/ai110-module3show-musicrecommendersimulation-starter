@@ -115,6 +115,98 @@ Top recommendations:
 **Screenshot or video** *(optional)*: <!-- Insert a screenshot or demo video link here -->
 
 ---
+## Top 5 Results for Each Profile (sample)
+```
+Profile: High-Energy Pop (conflicting mood)
+
+1. Sunrise City — Neon Echo        Score:   2.00
+    - Genre exact match (+2.0): pop
+
+2. Gym Hero — Max Pulse            Score:   2.00
+    - Genre exact match (+2.0): pop
+
+3. Rooftop Lights — Indigo Parade  Score:   1.00
+    - Genre related/subgenre match (+1.0): pop ~ indie pop
+
+4. Midnight Coding — LoRoom        Score:   0.00
+    - No strong matches
+
+5. Storm Runner — Voltline         Score:   0.00
+    - No strong matches
+
+Profile: Indie Pop (subgenre)
+
+1. Rooftop Lights — Indigo Parade  Score:   3.00
+    - Genre exact match (+2.0): indie pop
+    - Mood exact match (+1.0): happy
+
+2. Sunrise City — Neon Echo        Score:   2.00
+    - Genre related/subgenre match (+1.0): indie pop ~ pop
+    - Mood exact match (+1.0): happy
+
+3. Gym Hero — Max Pulse            Score:   1.00
+    - Genre related/subgenre match (+1.0): indie pop ~ pop
+
+4. Midnight Coding — LoRoom        Score:   0.00
+    - No strong matches
+
+5. Storm Runner — Voltline         Score:   0.00
+    - No strong matches
+
+Profile: Pop + EDM (compound genre, energy as string)
+
+1. Sunrise City — Neon Echo       Score:   1.00
+    - Genre related/subgenre match (+1.0): pop/edm ~ pop
+
+2. Gym Hero — Max Pulse           Score:   1.00
+    - Genre related/subgenre match (+1.0): pop/edm ~ pop
+
+3. Midnight Coding — LoRoom       Score:   0.00
+    - No strong matches
+
+4. Storm Runner — Voltline        Score:   0.00
+    - No strong matches
+
+5. Library Rain — Paper Lanterns  Score:   0.00
+    - No strong matches
+
+Profile: Chill Lofi (hyphen)
+
+1. Midnight Coding — LoRoom          Score:   1.00
+    - Mood exact match (+1.0): chill
+
+2. Library Rain — Paper Lanterns     Score:   1.00
+    - Mood exact match (+1.0): chill
+
+3. Spacewalk Thoughts — Orbit Bloom  Score:   1.00
+    - Mood exact match (+1.0): chill
+
+4. Sunrise City — Neon Echo          Score:   0.00
+    - No strong matches
+
+5. Storm Runner — Voltline           Score:   0.00
+    - No strong matches
+Profile: Deep Intense Rock (multi-genre)
+
+1. Storm Runner — Voltline        Score:   2.00
+    - Genre related/subgenre match (+1.0): rock
+    - metal ~ rock
+    - Mood exact match (+1.0): intense
+
+2. Gym Hero — Max Pulse           Score:   1.00
+    - Mood exact match (+1.0): intense
+
+3. Sunrise City — Neon Echo       Score:   0.00
+    - No strong matches
+
+4. Midnight Coding — LoRoom       Score:   0.00
+    - No strong matches
+
+5. Library Rain — Paper Lanterns  Score:   0.00
+    - No strong matches
+
+
+```
 
 ## Experiments You Tried
 
