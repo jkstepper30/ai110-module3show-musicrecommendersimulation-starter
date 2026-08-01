@@ -27,7 +27,7 @@ Replace this paragraph with your own summary of what your version does.
   •	Categorical metadata: genre, mood.
   •	Identifier fields: id, title, artist (used for lookup and optional artist-based rules).
 
-My UserProfile will store: 
+My User Profile will store: 
 
 •	Liked/seed song ids and short recent history (last N plays).
 •	Preferred genres and mood weights (counts or normalized frequencies).
@@ -48,6 +48,9 @@ Expected Biases:
 •	Genre dominance: strong genre points will favor same-genre items and can hide great matches from other genres that fit mood/energy. Mitigation: reduce genre weight slightly or add a diversity/serendipity boost (e.g., +small score for cross-genre high numeric similarity).
 
 •	Feedback loop & popularity bias: optimizing for clicks can amplify already-popular songs. Mitigation: include exploration (epsilon-greedy), exposure caps, or re-weight novelty.
+
+
+
 
 ---
 
@@ -91,12 +94,24 @@ You can add more tests in `tests/test_recommender.py`.
 Paste a sample of your recommender's output here as a text block so a reader can see what it produces:
 
 ```
-# e.g.:
-# User profile: genre=indie, mood=chill, energy=low
-# Recommendations:
-#   1. ...
-#   2. ...
-#   3. ...
+Top recommendations:
+
+1. Sunrise City — Neon Echo        Score:   3.00
+    - Genre exact match (+2.0): pop
+    - Mood exact match (+1.0): happy
+
+2. Gym Hero — Max Pulse            Score:   2.00
+    - Genre exact match (+2.0): pop
+
+3. Rooftop Lights — Indigo Parade  Score:   2.00
+    - Genre related/subgenre match (+1.0): pop ~ indie pop
+    - Mood exact match (+1.0): happy
+
+4. Midnight Coding — LoRoom        Score:   0.00
+    - No strong matches
+
+5. Storm Runner — Voltline         Score:   0.00
+    - No strong matches
 ```
 
 **Screenshot or video** *(optional)*: <!-- Insert a screenshot or demo video link here -->
