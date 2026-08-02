@@ -61,6 +61,7 @@ Prompts:
 
 ## 6. Limitations and Bias 
 
+
 Where the system struggles or behaves unfairly. 
 
 Prompts:  
@@ -74,7 +75,9 @@ Prompts:
 
 ## 7. Evaluation  
 
-How you checked whether the recommender behaved as expected. 
+User Profiles Tested 
+1. High-Energy Pop
+2. Indie Pop
 
 Prompts:  
 
