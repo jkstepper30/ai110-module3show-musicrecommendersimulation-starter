@@ -9,13 +9,9 @@ Example: **VibeFinder 1.0**
 
 ## 2. Intended Use  
 
-Describe what your recommender is designed to do and who it is for. 
-
-Prompts:  
-
-- What kind of recommendations does it generate  
-- What assumptions does it make about the user  
-- Is this for real users or classroom exploration  
+Generates short ranked song lists based on simple user preferences.  
+Assumes the user specifies genre, desired energy, and how much popularity matters.  
+Intended for classroom demos and quick experiments, not production personalization.
 
 ---
 
@@ -23,14 +19,10 @@ Prompts:
 
 Explain your scoring approach in simple language.  
 
-Prompts:  
+-The system is rule-based and scores songs with a weighted sum.  
+-Features used: genre match, energy distance, popularity boost, and tag matches.  
+-Weights are simple constants so behavior is easy to inspect and adjust.
 
-- What features of each song are used (genre, energy, mood, etc.)  
-- What user preferences are considered  
-- How does the model turn those into a score  
-- What changes did you make from the starter logic  
-
-Avoid code here. Pretend you are explaining the idea to a friend who does not program.
 
 ---
 
@@ -38,12 +30,10 @@ Avoid code here. Pretend you are explaining the idea to a friend who does not pr
 
 Describe the dataset the model uses.  
 
-Prompts:  
-
-- How many songs are in the catalog  
-- What genres or moods are represented  
-- Did you add or remove data  
-- Are there parts of musical taste missing in the dataset  
+Uses the starter CSV catalog with fields like title, artist, genre, energy, popularity, and tags.  
+Typical catalog size depends on the dataset in the repository (hundreds to a few thousand rows).  
+No real user listening histories are included.  
+Some niche genres and contextual metadata (time of day, activity) may be missing.
 
 ---
 
@@ -51,11 +41,9 @@ Prompts:
 
 Where does your system seem to work well  
 
-Prompts:  
-
-- User types for which it gives reasonable results  
-- Any patterns you think your scoring captures correctly  
-- Cases where the recommendations matched your intuition  
+- Works well for clear preference profiles (e.g., high-energy EDM or pop).  
+- Captures energy and popularity signals reliably when those are present in metadata.  
+- Results are explainable because each score component is visible.
 
 ---
 
@@ -94,12 +82,10 @@ The system over-prioritizes mainstream genres because the training set is heavil
 
 Ideas for how you would improve the model next.  
 
-Prompts:  
+- Add session and time-of-day context to honor listening intent.  
+- Introduce re-weighting or diversification to reduce popularity dominance.  
+- Add more granular tags and instrumentation features to surface niche styles.
 
-- Additional features or preferences  
-- Better ways to explain recommendations  
-- Improving diversity among the top results  
-- Handling more complex user tastes  
 
 ---
 
@@ -107,8 +93,6 @@ Prompts:
 
 A few sentences about your experience.  
 
-Prompts:  
-
-- What you learned about recommender systems  
-- Something unexpected or interesting you discovered  
-- How this changed the way you think about music recommendation apps  
+- Building a simple rule-based recommender taught how much popularity affects rankings.  
+- Transparent scoring made trade-offs easy to understand and adjust.  
+- Adding a few more features would make the system practically more useful.
