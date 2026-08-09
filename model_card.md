@@ -68,7 +68,7 @@ The system over-prioritizes mainstream genres because the training set is heavil
 ## 7. Evaluation  
 
 
-### Tested user profiles
+#### Tested user profiles
 
 - Pop-focused: prefers high popularity, mainstream artists, and upbeat tempo. Surprise: top lists became dominated by the same few artists, confirming a popularity bias.  
 - Acoustic / Low-energy: prefers acoustic instrumentation, low tempo, and organic timbres. Surprise: recommendations shifted to lower energy tracks but still occasionally included popular, slightly higher-energy songs.  
@@ -76,7 +76,7 @@ The system over-prioritizes mainstream genres because the training set is heavil
 - Eclectic / Indie-seeker: prefers niche, less popular artists and novelty. Surprise: the model struggled to surface truly niche tracks and instead favored marginally less-popular mainstream songs.  
 - Chill / Mood-based: prefers mellow mood and ambient textures (context rule: evening listening). Surprise: mood signals were not explicitly modeled, so the shift toward mellow tracks was smaller than expected.
 
-### Pairwise comparisons
+#### Pairwise comparisons
 
 - Pop-focused vs Acoustic: Pop recommendations skewed toward high-energy, highly popular tracks; Acoustic shifted toward lower-energy, guitar/strings-focused songs. This makes sense because popularity and tempo features drive the pop scores while instrumentation features favor acoustic picks.  
 - Pop-focused vs EDM: Both prefer high energy, but Pop favors chart-friendly song structures and familiar vocal hooks while EDM emphasizes electronic textures and steady danceable beats; overlap occurs when a track is both popular and danceable.  
