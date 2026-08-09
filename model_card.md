@@ -19,9 +19,9 @@ Intended for classroom demos and quick experiments, not production personalizati
 
 Explain your scoring approach in simple language.  
 
--The system is rule-based and scores songs with a weighted sum.  
--Features used: genre match, energy distance, popularity boost, and tag matches.  
--Weights are simple constants so behavior is easy to inspect and adjust.
+- The system is rule-based and scores songs with a weighted sum.  
+- Features used: genre match, energy distance, popularity boost, and tag matches.  
+- Weights are simple constants so behavior is easy to inspect and adjust.
 
 
 ---
@@ -30,10 +30,10 @@ Explain your scoring approach in simple language.
 
 Describe the dataset the model uses.  
 
-Uses the starter CSV catalog with fields like title, artist, genre, energy, popularity, and tags.  
-Typical catalog size depends on the dataset in the repository (hundreds to a few thousand rows).  
-No real user listening histories are included.  
-Some niche genres and contextual metadata (time of day, activity) may be missing.
+- Uses the starter CSV catalog with fields like title, artist, genre, energy, popularity, and tags.  
+- Typical catalog size depends on the dataset in the repository (hundreds to a few thousand rows).  
+- No real user listening histories are included.  
+- Some niche genres and contextual metadata (time of day, activity) may be missing.
 
 ---
 
